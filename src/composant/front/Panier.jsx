@@ -40,7 +40,7 @@ const Panier = () => {
         if(getError(demande)) return ; 
         
         // envoyer les données saisies dans l'API pour enregistrement 
-        axios.post(`${import.meta.env.VITE_API}livraison/articles.json`, demande)
+        axios.post(`${import.meta.env.VITE_API}livraison.json`, demande)
              .then(reponse => {
                 // vider le formulaire
                 e.target.reset();
@@ -56,6 +56,8 @@ const Panier = () => {
 
 
 
+
+    
 
     useEffect(() => {
         db.collection("cart")

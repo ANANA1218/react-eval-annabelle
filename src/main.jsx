@@ -8,6 +8,7 @@ import {  BrowserRouter , Routes , Route } from "react-router-dom"
 import Home from './composant/front/Home';
 import Contact from './composant/front/Contact';
 import Login from './composant/front/Login';
+import ViewOrder from './composant/front/ViewOrder';
 import Dashboard from './composant/back/Dashboard';
 import FormArticle from './composant/back/article/FormArticle';
 import CycleVie from './composant/front/CycleVie';
@@ -29,9 +30,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
           <Route path='contact' element={<Contact />} />
-          <Route path="login" element={<Login />} />
+          <Route path="commande" element={<Login />} />
           <Route path="cycle-vie" element={<CycleVie />} />
           <Route path="article/:id" element={<Single />} />
+          <Route path="commande/:id" element={<ViewOrder />} />
           <Route path="panier" element={<Panier />} />
           <Route path="mention-legale" element={<MentionLegale />} />
           <Route path="admin" element={<Template />}> 
