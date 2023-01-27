@@ -35,7 +35,7 @@ function App() {
       }
     })
 
-    db.collection('cart').doc(`${item.id}`).set(item, { merge: true })
+    db.collection('cart').doc('orders').collection('order').doc(`${item.id}`).set(item, { merge: true })
 
   }
 
