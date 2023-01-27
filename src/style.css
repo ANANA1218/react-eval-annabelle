@@ -1,0 +1,42 @@
+td , .card-body , .article_contenu{
+    white-space: break-spaces;
+    /* préserver les sauts de lignes dans les balises concernées*/
+}
+
+.mention-legale{
+    white-space: break-spaces;
+}
+
+.page{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/*
+<p>texte 
+saut de ligne</p>
+
+// par défaut 
+// white-space : normal
+<p>texte saut de ligne</p>
+
+white-space: break-spaces;
+<p>texte <br> saut de ligne</p>
+
+white-space: pre;
+// si texte court => résultat est le même
+<p>texte <br> saut de ligne</p>
+
+// le texte est long
+par défaut si le texte revient à ligne dès il atteint la largeur du parent 
+<p>texte
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo architecto iure porro qui minus id, aspernatur cumque, alias maxime optio, quis iste tenetur sint commodi corporis repudiandae tempora quam consequuntur.</p>
+mais si le nombre de caractères > largeur du parent pas de saut 
+
+pre
+
+pre-inline
+pre-wrap
+
+*/
