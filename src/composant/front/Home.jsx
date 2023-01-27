@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { db, fs } from '../../config/firebase'
 import { useArticle } from "../../hook/useArticle";
 import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   useEffect(() => {
@@ -44,12 +45,12 @@ function App() {
       <div className='row justify-content-center'>
         
         {articles.map((item) => (
-          <div className='col-3' key={item.id}>
+          <div className='col-4' key={item.id}>
             <div className="card"  >
               <img src={item.img} className="card-img-top" />
               <div className="card-body">
                 <h6 className="card-title">
-                  {item.titre} - $ {item.prix}
+                  {item.titre} -  {item.prix} €
                 </h6>
                 {
                   item.cart == false

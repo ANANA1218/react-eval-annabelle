@@ -14,8 +14,18 @@ const Panier = () => {
     const emailRef = useRef();
     const nomRef = useRef();
     const adresseRef = useRef();
-    //const cartRef = useRef();
+    const titreRef= useRef();
+    const descriptionRef= useRef();
+    const developerRef= useRef();
+    const  genreRef= useRef();
+    const imgRef= useRef();
+    const  prixRef= useRef();
+    const publisherRef= useRef();
+    const quantityRef= useRef();
+    const totalRef= useRef();
+    const release_dateRef= useRef();
     const messageRef = useRef();
+
     const [alerte , setAlerte , getError] = useAlert(livraisonVerif)
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,14 +33,14 @@ const Panier = () => {
             email : emailRef.current.value ,
             nom : nomRef.current.value ,
             adresse : adresseRef.current.value ,
-            //cart : [],
+            cart:articles.id,
             message : JSON.stringify(messageRef.current.value)
         }
         
         if(getError(demande)) return ; 
         
         // envoyer les données saisies dans l'API pour enregistrement 
-        axios.post(`${import.meta.env.VITE_API}livraison/articles.json`, demande)
+        axios.post(`${import.meta.env.VITE_API}livraison.json`, demande)
              .then(reponse => {
                 // vider le formulaire
                 e.target.reset();
@@ -46,6 +56,8 @@ const Panier = () => {
 
 
 
+
+    
 
     useEffect(() => {
         db.collection("cart")

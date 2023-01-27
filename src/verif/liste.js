@@ -36,6 +36,29 @@ export const livraisonVerif = Joi.object({
                }),
     nom : Joi.string().min(4).max(200).regex(/^[^<>]*$/).required(),
     adresse : Joi.string().min(4).max(10000).regex(/^[^<>]*$/).required(),
+    cart: Joi.array()
+    .items({
+      cart: Joi.boolean()
+        .required(),
+      titre: Joi.string()
+        .required(),
+      description: Joi.string()
+        .required(),
+      genre: Joi.string()
+        .required(),
+      developer: Joi.string()
+        .required(),
+      img: Joi.string()
+        .required(),
+      prix: Joi.number()
+        .required(),
+      quantity: Joi.number()
+        .required(),
+      publisher: Joi.string()
+        .required(),
+        release_date: Joi.string()
+        .required(),
+    }),
     message : Joi.string()
                   .min(4)
                   .max(1000)

@@ -15,7 +15,7 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
 const useStyles = makeStyles((theme) => ({
   navlinks: { marginLeft: theme.spacing(10), display: "flex" },
-  logo: { flexGrow: "1", cursor: "pointer" },
+  logo: { flexGrow: "1", cursor: "pointer", color: "white", },
   link: {
     textDecoration: "none",
     color: "white",
@@ -36,23 +36,24 @@ function Navbar() {
       <Toolbar>
       <SportsEsportsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 2, fontSize: '38px'}} />
         <Typography variant="h6" className={classes.logo}>
-          Navbar
+         AnnaGame
         </Typography>
        
           <div className={classes.navlinks}>
             <Link to="/" className={classes.link}  >
             Home
             </Link>
-            <Link to="/contact" className={classes.link}>
+          
+            <Link to="/commande" className={classes.link}>
+              Commande
+            </Link> 
+             <Link to="/contact" className={classes.link}>
              Contact
-            </Link>
-            <Link to="/login" className={classes.link}>
-              suivis livraison
             </Link>
             <br/>
           </div>
 
-         <IconButton aria-label="edit" href={`/panier`} sx={{fontSize: '38px', marginLeft: "70%",            
+         <IconButton aria-label="edit" href={`/panier`} sx={{fontSize: '38px', marginLeft: "0%",            
          color:'white'}}>
             <LocalMallIcon sx={{   fontSize: '25px'}} />
             </IconButton>
